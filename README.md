@@ -4,7 +4,7 @@ A Streamlit application for extracting and organizing media references from XML 
 
 ## Features
 
-- Extract images and videos referenced in XML files
+- Extract images, videos, and audio referenced in XML files
 - Map page IDs to titles using a book XML
 - Generate detailed reports of all media references
 - Create CSV files with all media metadata
@@ -65,4 +65,17 @@ Arguments:
 The extraction process generates:
 - A detailed report of all media references
 - A CSV file with metadata for all found media
-- Organized copies of media files (only if media files were provided) 
+- Organized copies of media files (only if media files were provided)
+
+## Deployment on Render
+
+This application is pre-configured for deployment on Render.
+
+1. Fork or clone this repository to your GitHub account
+2. Log in to [Render](https://render.com/)
+3. From the Render dashboard, click "New" and select "Blueprint"
+4. Connect your GitHub account and select this repository
+5. Render will automatically detect the configuration in `render.yaml`
+6. Click "Apply" to deploy the application
+
+The app will be deployed and accessible via a URL provided by Render. 

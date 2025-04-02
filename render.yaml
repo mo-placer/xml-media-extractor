@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: xml-media-extractor
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run media_extraction_app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.2
+      - key: PORT
+        value: 8501 
