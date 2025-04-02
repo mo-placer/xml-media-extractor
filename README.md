@@ -69,13 +69,17 @@ The extraction process generates:
 
 ## Deployment on Render
 
-This application is pre-configured for deployment on Render.
+This application is ready for deployment on Render as a web service.
 
 1. Fork or clone this repository to your GitHub account
 2. Log in to [Render](https://render.com/)
-3. From the Render dashboard, click "New" and select "Blueprint"
+3. From the Render dashboard, click "New" and select "Web Service"
 4. Connect your GitHub account and select this repository
-5. Render will automatically detect the configuration in `render.yaml`
-6. Click "Apply" to deploy the application
+5. Configure your web service with these settings:
+   - **Name**: xml-media-extractor (or your preferred name)
+   - **Runtime**: Python 3
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `streamlit run media_extraction_app.py`
+6. Click "Create Web Service" to deploy the application
 
-The app will be deployed and accessible via a URL provided by Render. 
+The app will be deployed and accessible via a URL provided by Render. For a free tier service, your app will spin down after inactivity, but will automatically start up when someone accesses the URL. 
